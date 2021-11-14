@@ -17,7 +17,7 @@ Console.WriteLine(json);
 
 var dynamicPerson = JsonSerializer.Deserialize<dynamic>(json, settings);
 
-var newPerson = JsonSerializer.Deserialize<Person>(dynamicPerson, settings);
+Person newPerson = JsonSerializer.Deserialize<Person>(dynamicPerson, settings);
 
 Console.WriteLine(newPerson);
 record Person(string Id, string Name);
